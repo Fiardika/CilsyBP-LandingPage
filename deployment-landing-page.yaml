@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: landing-page-deployment
-        image: fiardika/landing-page-jenkins:latest
+        image: fiardika/staging-landing-page-jenkins:latest
         imagePullPolicy: "Always"
         ports:
         - containerPort: 80
