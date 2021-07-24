@@ -43,21 +43,21 @@ metadata:
   annotations:
 spec:
   rules:
-  - host: pesbuk.fiardika.xyz
+  - host: fiardika.fiardika.xyz   
     http:
       paths:
         - backend:
-            serviceName: pesbuk-service
-            servicePort: 80
-  - host: fiardika.fiardika.xyz
+           serviceName: landing-page-service
+           servicePort: 80
+  - host: pesbuk.fiardika.xyz  
     http:
       paths:
         - backend:
-            serviceName: landing-page-service
-            servicePort: 80
-  - host: blog.fiardika.xyz
+           serviceName: pesbuk-service
+           servicePort: 80
+  - host: blog.fiardika.xyz    
     http:
       paths:
         - backend:
-            serviceName: wordpress-service
-            servicePort: 80
+           serviceName: wordpress-service
+           servicePort: 80
