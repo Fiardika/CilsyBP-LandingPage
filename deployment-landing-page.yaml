@@ -46,7 +46,7 @@ metadata:
   name: ingress
 spec:
   rules:
-  - host: pesbuk.fiardika.xyz
+  - host: fiardika.fiardika.xyz
     http:
       paths:
         - backend:
