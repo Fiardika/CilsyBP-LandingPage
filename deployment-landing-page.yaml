@@ -50,5 +50,5 @@ spec:
     http:
       paths:
         - backend:
-           serviceName: pesbuk-service
+           serviceName: landing-page-service
            servicePort: 80
