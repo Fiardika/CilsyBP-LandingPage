@@ -15,7 +15,6 @@ spec:
       labels:
         app: landing-page-deployment
     spec:
-      terminationGracePeriodSeconds: 30
       containers:
       - name: landing-page-deployment
         image: fiardika/landing-page-jenkins:latest
@@ -37,3 +36,31 @@ spec:
   - protocol: TCP
     port: 80
     targetPort: 80
+
+---
+
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress
+  namespace: production
+spec:
+  rules:
+  - host: pesbuk.fiardika.xyz
+    http:
+      paths:
+        - backend:
+            serviceName: pesbuk-service
+            servicePort: 80
+  - host: fiardika.fiardika.xyz
+    http:
+      paths:
+        - backend:
+            serviceName: landing-page-service
+            servicePort: 80
+  - host: blog.fiardika.xyz
+    http:
+      paths:
+        - backend:
+            serviceName: wordpress-service
+            servicePort: 80
